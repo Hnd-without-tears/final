@@ -48,7 +48,7 @@ def image_upload_page_gallery(request):
 
 def dashboard(request):
     departments = Department.objects.all()
-    return render(request, 'pages/quizzy.html', {'departments': departments})
+    return render(request, 'Hnd-made-easy/quizzy.html', {'departments': departments})
 
 
 #...............gallery.......................................

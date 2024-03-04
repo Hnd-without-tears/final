@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Pending</title>
+</head>
+<body>
+    <h1>Payment Pending</h1>
+    
+    <p>Your payment is currently pending. Please complete the payment process to proceed.</p>
+    
+    <!-- Add any additional content or form elements as needed -->
+    
+    <form method="POST" action="{% url 'payment' %}">
+        {% csrf_token %}
+        <!-- Include payment form fields here, such as amount and phone number -->
+        <!-- Example: -->
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
+        <br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number">
+        <br>
+        <input type="submit" value="Submit Payment">
+    </form>
+</body>
+</html>
