@@ -46,6 +46,7 @@ def image_upload_page_gallery(request):
     item = get_images()
     return render(request,"pages/empty.html",reguler_datas({"categories":item[0],"images":item[1]}))
 
+@login_required(login_url='/FourNotFout')
 def dashboard(request):
     departments = Department.objects.all()
     return render(request, 'Hnd-made-easy/quizzy.html', {'departments': departments})
